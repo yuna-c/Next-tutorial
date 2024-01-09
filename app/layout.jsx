@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <button className="btn">BTN BTN</button>
       </body>
     </html>
   );
