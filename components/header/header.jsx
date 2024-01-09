@@ -25,7 +25,7 @@ export default function Header() {
         <li>
           <Link
             href="/about"
-            className={pathname === "/about" ? styles.on : ""}
+            className={pathname === "/about" ? styles.active : ""}
           >
             About
           </Link>
