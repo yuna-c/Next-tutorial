@@ -1,12 +1,10 @@
 ## https://nextjs.org/docs
 
-## node v18.17.0 이상, cmd로
-
-## npx create-next-app@latest
-
-## npm i sass --save
-
-## npm run dev
+node v18.17.0 이상<br>
+cmd
+$ npx create-next-app@latest
+$ npm i sass --save
+$npm run dev
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
