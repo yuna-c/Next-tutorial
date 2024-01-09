@@ -1,4 +1,4 @@
-import Header from "./components/Header/header";
+import Header from "@/components/header/header";
 import "./styles/globals.scss";
 
 export const metadata = {
@@ -26,4 +26,5 @@ export default function RootLayout({ children }) {
   Partial Component 
   --페이지 안쪽에서 호출되면서 부분적인 UI나 기능을 담당하는 컴포넌트 
   --componets>header.jsx, componets/popup.jsx 같은 것들
+  -- Router
 */

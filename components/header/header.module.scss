@@ -1,0 +1,14 @@
+$color-primary: blueviolet;
+
+.header {
+  ul {
+    li {
+      font-size: 1rem;
+      font-weight: 900;
+
+      a.on {
+        color: $color-primary;
+      }
+    }
+  }
+}

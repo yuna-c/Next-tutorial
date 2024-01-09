@@ -5,7 +5,7 @@ import styles from "./about.module.scss";
 export default function About() {
   return (
     <main className={styles.about}>
-      <h1 className={styles.h1}>About 페이지</h1>
+      <h1 className={styles.h1}>About Page</h1>
     </main>
   );
 }

@@ -1,1 +1,5 @@
-$color-primary: blueviolet;
+$color-primary: orangered;
+
+:export {
+  primaryColor: $color-primary;
+}

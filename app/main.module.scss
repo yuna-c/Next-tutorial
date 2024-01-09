@@ -1,4 +1,7 @@
-$color-primary: blueviolet;
+@import "./styles/_variables.scss";
+
+// $color-primary: blueviolet;
+
 .main {
   .h1 {
     font-size: 5rem;
