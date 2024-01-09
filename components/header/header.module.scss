@@ -1,3 +1,4 @@
+@import "../../app/styles/variables";
 $color-primary: blueviolet;
 
 .header {
@@ -8,6 +9,10 @@ $color-primary: blueviolet;
 
       a.on {
         color: $color-primary;
+      }
+
+      a.active {
+        color: red;
       }
     }
   }
