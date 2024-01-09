@@ -11,6 +11,6 @@ export default function Gallery() {
 export const generateMetadata = () => {
   return {
     title: "Gallery Page",
-    description: "Information of ABC Company including President, crew info",
+    description: "위치는 위나 아래나 상관없어",
   };
 };
