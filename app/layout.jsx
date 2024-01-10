@@ -19,12 +19,13 @@ import clsx from "clsx";
 */
 
 const roboto = Roboto({
-  weight: ["100", "500", "700", "900"],
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
-  preload: true,
-  variable: "--font-roboto",
+  preload: true, //subsets가 지정되어 있을시 프리로드 기능사용
+  variable: "--font-roboto", //직접 변수명 등록
 });
+
 const isRoboto = true;
 console.log(roboto);
 
@@ -39,7 +40,8 @@ export default function RootLayout({ children }) {
       {/* clsx활용시 변수에 조건문 적용 가능 */}
       <body className={clsx("wrap", isRoboto && roboto.variable)}>
         <Header />
-        <p className={roboto.className}>Hello Roboto</p>
+        <p>Hello Roboto</p>
+
         {children}
         <button className="btn">BTN BTN</button>
       </body>
