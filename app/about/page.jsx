@@ -1,5 +1,4 @@
 import styles from "./about.module.scss";
-
 import President from "./president/page";
 import Company from "./company/page";
 

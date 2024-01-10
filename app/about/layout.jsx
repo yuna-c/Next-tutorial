@@ -6,6 +6,7 @@ export const generateMetadata = () => {
     description: "Information of ABC Company including President, crew info",
   };
 };
+
 export default function Layout({ children }) {
   return (
     <div className="layout">
