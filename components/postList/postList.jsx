@@ -8,6 +8,8 @@ export default function PostList() {
   //미션 - 해당 컴포넌트의 li를 링크로 변경해서
   //해당 링크 클릭시 상세 페이지 컴포넌트가 열리면서 클릭한 목록에 대한 데이터가 출력되는 상세페이지 출력
   //필요한 기술 : dynamic routing, next/link, useParams
+
+  //클라이언트 컴포넌트 내에서만 useState, useRef, useEffect사용
   useEffect(() => {
     const fetchPosts = async (url) => {
       const data = await fetch(url);
