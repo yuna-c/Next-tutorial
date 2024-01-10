@@ -31,7 +31,10 @@ export default function PostDetail({ params }) {
       <p>{Post?.body.replace("\n", "<br>")}</p>
       <br />
 
-      <strong>&lt;개행 에러&gt;</strong>
+      <strong>
+        &lt;개행 에러 : Warning: Each child in a list should have a unique _key_
+        prop.&gt;
+      </strong>
       <div>
         {Post?.body.split("\n").map((txt) => {
           return <p key={txt}>{txt}</p>;
@@ -60,7 +63,7 @@ export default function PostDetail({ params }) {
             React.createElement(
               "p",
               null,
-              React.createElement("sapn", null, txt)
+              React.createElement("span", null, txt)
             )
           )}
       </div>
