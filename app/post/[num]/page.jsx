@@ -1,6 +1,6 @@
 "use client";
 // import { useParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function PostDetail({ params }) {
   // const { num } = useParams();
@@ -27,7 +27,43 @@ export default function PostDetail({ params }) {
   return (
     <div>
       <h2>{Post?.title}</h2>
-      <p>{Post?.body}</p>
+      <strong>&lt;문자 치환&gt;</strong>
+      <p>{Post?.body.replace("\n", "<br>")}</p>
+      <br />
+
+      <strong>&lt;개행 에러&gt;</strong>
+      <div>
+        {Post?.body.split("\n").map((txt) => {
+          return <p key={txt}>{txt}</p>;
+        })}
+      </div>
+      <br />
+
+      <strong>&lt;React.Fragment을 통한 키값 전달&gt;</strong>
+      <div>
+        {Post?.body.split("\n").map((txt) => {
+          return (
+            <React.Fragment key={txt}>
+              {txt}
+              <br />
+            </React.Fragment>
+          );
+        })}
+      </div>
+      <br />
+
+      <strong>&lt;React.Fragment을 통한 키값 전달 코드 축약 &gt;</strong>
+      <div>
+        {Post?.body
+          .split("\n")
+          .map((txt) =>
+            React.createElement(
+              "p",
+              null,
+              React.createElement("sapn", null, txt)
+            )
+          )}
+      </div>
     </div>
   );
 }
