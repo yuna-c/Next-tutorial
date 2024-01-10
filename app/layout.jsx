@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
       {/* clsx활용시 변수에 조건문 적용 가능 */}
       <body className={clsx("wrap", isRoboto && roboto.variable)}>
         <Header />
-        <h2>Hello Roboto</h2>
+        {/* <h2>Hello Roboto</h2> */}
 
         {children}
         <button className="btn">BTN BTN</button>

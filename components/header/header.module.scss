@@ -5,11 +5,14 @@ $color1-primary: seagreen;
 .header {
   ul {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 2rem;
 
     li {
       font-size: 7rem;
       font-weight: 900;
+      word-wrap: normal;
+      white-space: nowrap;
 
       a.on {
         color: $color-primary;

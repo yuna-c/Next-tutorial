@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import styles from "./header.module.scss";
-console.log(styles);
+// console.log(styles);
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
-  console.log(pathname);
+  // console.log(pathname);
 
   return (
     <header className={styles.header}>
@@ -19,7 +19,7 @@ export default function Header() {
               console.log(pathname);
             }}
           >
-            Main
+            Main |
           </Link>
         </li>
         <li>
@@ -27,7 +27,7 @@ export default function Header() {
             href="/about"
             className={pathname === "/about" ? styles.active : ""}
           >
-            About
+            About |
           </Link>
         </li>
         <li>
@@ -35,7 +35,12 @@ export default function Header() {
             href="/gallery"
             className={pathname === "/gallery" ? styles.on : ""}
           >
-            Gallery
+            Gallery |
+          </Link>
+        </li>
+        <li>
+          <Link href="/post" className={pathname === "/post" ? styles.on : ""}>
+            Post |
           </Link>
         </li>
       </ul>
