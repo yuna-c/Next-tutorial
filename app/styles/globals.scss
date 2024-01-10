@@ -1,6 +1,6 @@
 //일반 구글서버에서 가져온 폰트는 최적화가 되어 있지않으므로 네크워크 탭에서 확인해보면
 //똑같은 폰트임에도 불구하고 next자체적으로 최적화시켜서 가져온 폰트보다 40%정도 파일용량이 더 큼
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700;900&display=swap");
 
 * {
   margin: 0;
@@ -20,7 +20,8 @@ li {
 }
 
 body {
-  background-color: rgba(218, 112, 214, 0.472);
+  width: 100%;
+  background-color: rgba(218, 112, 214, 0.372);
 
   .btn {
     padding: 10px;
@@ -33,6 +34,11 @@ body {
 }
 
 .roboto {
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+.h1 {
+  font-family: var(--font-roboto);
+  font-weight: 900;
 }

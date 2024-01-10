@@ -1,8 +1,39 @@
 import Header from "@/components/header/header";
 import "./styles/globals.scss";
-import { Rubik_Maze } from "next/font/google";
+import { Moirai_One, Rubik_Maze, Roboto } from "next/font/google";
 
-const roboto = Rubik_Maze({
+/*
+  외부폰트 적용시 display 옵션별 기능 설명
+  참조링크: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
+  auto: 사용하는 브라우저의 user agent설정값에 따라서 자동으로 외부폰트 적용설정을 사용
+  block: 적은 대기시간 설정후 외부폰트 적용될때까지 계속해도 시도
+  swap: block보다 대기시간을 더 짧게 설정하고 외부폰트 적용될때까지 계속 시도
+  fallback: 대기시간도 짧게 폰트적용도 시도도 짧게 처리해서 외부폰트 미적용시 바로 대체 시스템폰트 적용
+  optional: 대기시간을 짧게 설정하고 외부폰트 시도를 무시
+  block period: 외부폰트가 import되기 아무것도 보이지 대채폰트가 적용된 상태
+  font swap period: 외부폰트를 적용하려고 시도하는 상태
+  failure period: 외부폰트 연결을 실패로 인지하는 상태
+
+  preload : true 사용시, 루트 레이아웃에 적용시 전역에 걸쳐 프리로드 , 서브 레이아웃 적용시 해당 컴포넌트만 사용 가능
+
+*/
+
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true, //subset가 지정되어 있을 시 프리로드 기능 사용
+  variable: "--font-roboto",
+});
+
+const rubikMaze = Rubik_Maze({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
+
+const moiraiOne = Moirai_One({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -18,10 +49,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      {/* 아래처럼 직접등록한 변수명을 설정시 해당 JSX요소 안쪽에서는 css에서 등록된 변수명으로 폰트 설정가능  */}
+      <body className={`wrap ${roboto.variable}`}>
         <Header />
         <h1 className="roboto">No Google Font</h1>
-        <h1 className={roboto.className}>Google Font</h1>
+        <h1 className={`h1 ${roboto.variable}`}>Roboto Font</h1>
+        <h1 className={rubikMaze.className}>Rubik Maze Font</h1>
+        <h2 className={moiraiOne.className}>Moirai One Font</h2>
         {children}
         <button className="btn">BTN BTN</button>
       </body>
