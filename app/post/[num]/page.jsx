@@ -52,7 +52,7 @@ export default function PostDetail({ params }) {
       </div>
       <br />
 
-      <strong>&lt;React.Fragment을 통한 키값 전달 코드 축약 &gt;</strong>
+      <strong>&lt;React.Fragment을 통한 키값 전달 코드 중첩 축약 &gt;</strong>
       <div>
         {Post?.body
           .split("\n")
