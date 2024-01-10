@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
         {/* <h2>Hello Roboto</h2> */}
 
         {children}
-        <button className="btn">BTN BTN</button>
+        {/* <button className="btn">BTN BTN</button> */}
       </body>
     </html>
   );
