@@ -14,7 +14,6 @@ customize alias: No (Alias 디폴트값 수정안함, 절대경로 편하게 잡
 
 npx create-next-app@latest
 npm i sass --save
-npm run dev
 ```
 
 [Next.js](https://nextjs.org/docs)
@@ -34,6 +33,8 @@ yarn dev
 pnpm dev
 # or
 bun dev
+#or
+npm run start / npm run build 후
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

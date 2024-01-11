@@ -43,6 +43,14 @@ export default function Header() {
             Post |
           </Link>
         </li>
+        <li>
+          <Link
+            href="/postList"
+            className={pathname === "/postList" ? styles.on : ""}
+          >
+            postList |
+          </Link>
+        </li>
       </ul>
     </header>
   );
