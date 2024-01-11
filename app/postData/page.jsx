@@ -1,16 +1,31 @@
-import PostDataList from "@/components/postDataList/postDataList";
-import styles from "./postData.module.scss";
-import clsx from "clsx";
+// import PostDataList from "@/components/postDataList/postDataList";
+"use client";
+import { useState, useEffect } from "react";
 
-export default function PostData() {
+export default function Post() {
+  const [Post, setPost] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/requestPost")
+      .then((data) => data.json())
+      .then((json) => {
+        console.log(json);
+        setPost(json.result);
+      });
+  }, []);
+
   return (
-    <section className={clsx(styles.postData)}>
-      <h1>Post Data List</h1>
-      <PostDataList />
-    </section>
+    <div className="postList">
+      {Post.map((post) => {
+        return (
+          <article key={post.name}>
+            <h2>{post.name}</h2>
+          </article>
+        );
+      })}
+    </div>
   );
 }
-
 /*
 front
 - 사용자가 URL요청시 그에 출력될 UI컴포넌트들을 미리 설정한 라우터에 따라 출력 로직 개발
