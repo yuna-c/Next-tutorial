@@ -1,25 +1,3 @@
-## start
-
-```bash
-
-node v18.17.0 이상
-cmd(화살표 키)
-
-TypeScript: No (타입스트립트 사용안함)
-EsLint: Yes (EsLint기능 사용함)
-Tailwind CSS: No (스타일을 tailwindCSS 사용안함)
-src/directory: No (src 디렉토리 사용안함, 리액트와 비슷한 방식의 옛날 작업 버전)
-App Router: Yex (App router 사용함, 서버컴포넌트, 클라이언트 컴포넌트, 서버액션 사용가능)
-customize alias: No (Alias 디폴트값 수정안함, 절대경로 편하게 잡아주는 기능 사용)
-
-npx create-next-app@latest
-npm i sass --save
-```
-
-[Next.js](https://nextjs.org/docs)<br>
-[GoogleFont](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts)<br>
-[jsonplaceholder](https://jsonplaceholder.typicode.com/)<br>
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,8 +12,6 @@ yarn dev
 pnpm dev
 # or
 bun dev
-#or
-npm run start / npm run build 후
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

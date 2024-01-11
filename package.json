@@ -1,5 +1,5 @@
 {
-  "name": "next-tutorial",
+  "name": "next-basic",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,8 @@
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.7"
+    "sass": "^1.69.7",
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "eslint": "^8",

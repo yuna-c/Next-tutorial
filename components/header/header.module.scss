@@ -1,27 +1,18 @@
-@import "../../app/styles/variables";
-$color-primary: blueviolet;
-$color1-primary: seagreen;
-
 .header {
-  margin-bottom: 2rem;
-  ul {
+  width: 100%;
+  padding: 30px 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: #333;
+
+  * {
+    color: inherit;
+  }
+
+  nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    li {
-      font-size: 7rem;
-      font-weight: 900;
-      word-wrap: normal;
-      white-space: nowrap;
-
-      a.on {
-        color: $color-primary;
-      }
-
-      a.active {
-        color: $color1-primary;
-      }
-    }
+    gap: 40px;
   }
 }

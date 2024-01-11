@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import { postDB } from "@/DB/postData";
+import { postDB } from '@/DB/postData';
+import { NextResponse } from 'next/server';
 
 export function GET() {
   return NextResponse.json({ result: postDB });

@@ -1,57 +1,18 @@
-"use client";
-import Link from "next/link";
-import styles from "./header.module.scss";
-// console.log(styles);
-import { usePathname } from "next/navigation";
+import styles from './header.module.scss';
+import clsx from 'clsx';
+import Link from 'next/link';
 
 export default function Header() {
-  const pathname = usePathname();
-  // console.log(pathname);
-
   return (
-    <header className={styles.header}>
-      <ul>
-        <li>
-          <Link
-            href="/"
-            className={pathname === "/" ? styles.on : ""}
-            onClick={() => {
-              console.log(pathname);
-            }}
-          >
-            Main |
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/about"
-            className={pathname === "/about" ? styles.active : ""}
-          >
-            About |
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/gallery"
-            className={pathname === "/gallery" ? styles.on : ""}
-          >
-            Gallery |
-          </Link>
-        </li>
-        <li>
-          <Link href="/post" className={pathname === "/post" ? styles.on : ""}>
-            Post |
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/postData"
-            className={pathname === "/postData" ? styles.on : ""}
-          >
-            postData |
-          </Link>
-        </li>
-      </ul>
+    <header className={clsx(styles.header)}>
+      <h1>
+        <Link href="/">Logo</Link>
+      </h1>
+
+      <nav>
+        <Link href="/about">About</Link>
+        <Link href="/post">Post</Link>
+      </nav>
     </header>
   );
 }
