@@ -6,7 +6,9 @@ export default function Post() {
   const [Post, setPost] = useState([]);
 
   useEffect(() => {
+    //순서3 -컴포넌트 마운트시 미리 서버라우터로 데이터요청
     fetch("/api/requestPost")
+      //순서4-응답이 성공하면 응답객체 서버로부터 전달받고 state에 전달
       .then((data) => data.json())
       .then((json) => {
         console.log(json);
@@ -16,6 +18,7 @@ export default function Post() {
 
   return (
     <div className="postList">
+      {/* 순서5- 응답받은 State값으로 화면 렌더링 */}
       {Post.map((post) => {
         return (
           <article key={post.name}>
@@ -26,6 +29,7 @@ export default function Post() {
     </div>
   );
 }
+
 /*
 front
 - 사용자가 URL요청시 그에 출력될 UI컴포넌트들을 미리 설정한 라우터에 따라 출력 로직 개발
