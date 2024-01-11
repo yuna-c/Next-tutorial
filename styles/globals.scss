@@ -10,13 +10,31 @@ li {
 }
 a {
   text-decoration: none;
+  color: #222;
 }
 
 .roboto {
-  font-family: 'roboto';
+  font-family: "roboto";
   font-weight: 400;
 }
 
 h1 {
   font-family: var(--font-roboto);
+}
+
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+  vertical-align: middle;
 }

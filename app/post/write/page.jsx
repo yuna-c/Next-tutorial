@@ -5,12 +5,12 @@ import clsx from "clsx";
 
 export default function Write() {
   const [Post, setPost] = useState({ title: "", content: "" });
-  console.log(Post);
 
   const handleChange = (e) => {
     const { name, value } = e.target; //{'title','제목값'}
     setPost({ ...Post, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -19,32 +19,18 @@ export default function Write() {
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(Post),
     }).then((response) => {
-      // 응답 성공시
+      //응답 성공시
       if (response.ok) {
         response.json().then((data) => {
           console.log(data);
           alert("글 저장에 성공했습니다.");
         });
       } else {
-        // 응답 실패시
+        //응답 실패시
         console.log(response);
         alert("글 저장에 실패했습니다.");
       }
     });
-
-    // const response = await fetch("/api/requestPost", {
-    //   method: "POST",
-    //   headers: { "Content-type": "application/json" },
-    //   body: JSON.stringify(Post),
-    // });
-
-    // if (response.ok) {
-    //   console.log(response);
-    //   alert("글 저장에 성공했습니다.");
-    // } else {
-    //   console.log(response);
-    //   alert("글 저장에 실패했습니다.");
-    // }
   };
 
   return (

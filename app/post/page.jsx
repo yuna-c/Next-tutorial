@@ -1,5 +1,4 @@
 "use client";
-
 import clsx from "clsx";
 import styles from "./post.module.scss";
 import Link from "next/link";
