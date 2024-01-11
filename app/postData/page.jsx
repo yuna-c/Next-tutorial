@@ -24,7 +24,7 @@ export default function Post() {
         return (
           <article key={post.name}>
             <h2>
-              <Link href={`/postData/abc/${post.id}`}>{post.name}</Link>
+              <Link href={`/postData/${post.id}`}>{post.name}</Link>
             </h2>
           </article>
         );
