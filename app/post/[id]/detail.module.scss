@@ -10,15 +10,21 @@
   article {
     width: 100%;
     height: 200px;
-    padding: 50px;
-    background: #8080805d;
+    padding: 1rem;
+    background: #eee;
     margin-bottom: 30px;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
   }
 
   button {
     width: 50%;
     padding: 0.8rem 1rem;
-    background-color: #8080805d;
+    background-color: #eee;
     border-bottom: 1px solid #555;
     color: #555;
     font-size: 1.5rem;

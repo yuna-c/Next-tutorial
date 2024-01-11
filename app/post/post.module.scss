@@ -6,6 +6,11 @@
   flex-wrap: wrap;
   align-content: flex-start;
 
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+  }
+
   h2 {
     width: 100%;
     font-size: 1.5rem;
@@ -20,7 +25,7 @@
     button {
       width: 100%;
       padding: 0.8rem 1rem;
-      background-color: #8080805d;
+      background-color: #eee;
       border-bottom: 1px solid #555;
       color: #555;
       text-align: center;
@@ -30,7 +35,7 @@
 
   article {
     width: 30%;
-    background: #8080805d;
+    background: #eee;
     padding: 30px;
     margin-bottom: 30px;
     border-top: 1px solid #555;
