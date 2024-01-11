@@ -45,10 +45,10 @@ export default function Header() {
         </li>
         <li>
           <Link
-            href="/postList"
-            className={pathname === "/postList" ? styles.on : ""}
+            href="/postData"
+            className={pathname === "/postData" ? styles.on : ""}
           >
-            postList |
+            postData |
           </Link>
         </li>
       </ul>

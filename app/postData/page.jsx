@@ -1,10 +1,12 @@
-import styles from "./postList.module.scss";
+import PostDataList from "@/components/postDataList/postDataList";
+import styles from "./postData.module.scss";
 import clsx from "clsx";
 
-export default function PostList() {
+export default function PostData() {
   return (
-    <section className={clsx(styles.post)}>
-      <h1>Post List</h1>
+    <section className={clsx(styles.postData)}>
+      <h1>Post Data List</h1>
+      <PostDataList />
     </section>
   );
 }
@@ -18,6 +20,7 @@ export default function PostList() {
   - fetch(url,{method:'POST',body:저장할 데이터}) POST방식 요청
   - fetch(url,{method:'PUT',body:수정할 데이터}) PUT방식 요청
   - fetch(url+QueryString,{method:'DELETE}) DELETE방식 요청
+
   back
   - 클라이언트로부터 넘어오는 요청의 형식에 맞게 응답처리 로직 분기처리 (Server routing)
   - 백엔드가 전달받은 요청은 크게 4가지 (CRUD) -> RESTFul API(CRUD 구조적으로 처리하기위한 개발방법론)
@@ -25,4 +28,6 @@ export default function PostList() {
   - Read (GET) - 쿼리문이나 parameter같이 덜 중요한 데이터 전달 (url-queryString)
   - Update (PUT) -중요한데이터 전달 (body)
   - Delete (DELETE) -쿼리문이나 parameter같이 덜 중요한 데이터 전달 (url-queryString)
+
+  https://nextjs.org/docs/app/building-your-application/routing/route-handlers
 */
