@@ -21,8 +21,12 @@ export default function PostDetail({ params }) {
       <article>
         <h2>{PostEl?.title}</h2>
         <p>{PostEl?.content}</p>
-        <strong>{id}번째 게시글 상세페이지</strong>
       </article>
+
+      <nav>
+        <button>Edit</button>
+        <button>Delete</button>
+      </nav>
     </section>
   );
 }
