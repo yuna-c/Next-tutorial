@@ -1,5 +1,6 @@
 // import PostDataList from "@/components/postDataList/postDataList";
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Post() {
@@ -22,7 +23,9 @@ export default function Post() {
       {Post.map((post) => {
         return (
           <article key={post.name}>
-            <h2>{post.name}</h2>
+            <h2>
+              <Link href={`/postData/${post.id}`}>{post.name}</Link>
+            </h2>
           </article>
         );
       })}
