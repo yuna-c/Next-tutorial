@@ -4,8 +4,15 @@
 
 import { NextResponse } from "next/server";
 
+const posts = [
+  { name: "David", age: 20 },
+  { name: "Emily", age: 22 },
+  { name: "Michael", age: 30 },
+];
+
 export function GET() {
-  return NextResponse.json({ data: "클라이언트 요청에 대한 Post 응답" });
+  // return NextResponse.json({ data: "클라이언트 요청에 대한 Post 응답" });
+  return NextResponse.json({ result: posts });
 }
 
 //1 - 서버쪽 API라우터에서 미리 클라이언트에 요청이 들어올것에 대비한 응답로직 라우팅 구현
