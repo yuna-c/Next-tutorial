@@ -14,19 +14,37 @@ export default function Write() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/requestPost", {
+    fetch("/api/requestPost2", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(Post),
+    }).then((response) => {
+      // 응답 성공시
+      if (response.ok) {
+        response.json().then((data) => {
+          console.log(data);
+          alert("글 저장에 성공했습니다.");
+        });
+      } else {
+        // 응답 실패시
+        console.log(response);
+        alert("글 저장에 실패했습니다.");
+      }
     });
 
-    if (response.ok) {
-      console.log(response);
-      alert("글 저장에 성공했습니다.");
-    } else {
-      console.log(response);
-      alert("글 저장에 실패했습니다.");
-    }
+    // const response = await fetch("/api/requestPost", {
+    //   method: "POST",
+    //   headers: { "Content-type": "application/json" },
+    //   body: JSON.stringify(Post),
+    // });
+
+    // if (response.ok) {
+    //   console.log(response);
+    //   alert("글 저장에 성공했습니다.");
+    // } else {
+    //   console.log(response);
+    //   alert("글 저장에 실패했습니다.");
+    // }
   };
 
   return (
