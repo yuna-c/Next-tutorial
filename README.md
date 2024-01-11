@@ -16,9 +16,9 @@ npx create-next-app@latest
 npm i sass --save
 ```
 
-[Next.js](https://nextjs.org/docs)
-[GoogleFont](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts)
-[jsonplaceholder](https://jsonplaceholder.typicode.com/)
+[Next.js](https://nextjs.org/docs)<br>
+[GoogleFont](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts)<br>
+[jsonplaceholder](https://jsonplaceholder.typicode.com/)<br>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
