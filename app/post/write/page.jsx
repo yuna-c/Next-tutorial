@@ -11,10 +11,10 @@ export default function Write() {
     const { name, value } = e.target; //{'title','제목값'}
     setPost({ ...Post, [name]: value });
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("/api/requestPost2", {
+    fetch("/api/requestPost", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(Post),
