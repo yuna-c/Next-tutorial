@@ -21,8 +21,10 @@ export default function Write() {
     });
 
     if (response.ok) {
+      console.log(response);
       alert("글 저장에 성공했습니다.");
     } else {
+      console.log(response);
       alert("글 저장에 실패했습니다.");
     }
   };
